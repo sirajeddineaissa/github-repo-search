@@ -52,6 +52,7 @@ const Hero: React.FC = () => {
           <Button
             href="https://github.com/sirajeddineaissa/github-repo-search"
             target="_blank"
+            rel="noopener noreferrer"
             as="a"
             colorScheme="gray"
             display="inline-flex"

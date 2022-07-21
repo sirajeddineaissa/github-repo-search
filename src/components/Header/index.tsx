@@ -12,6 +12,7 @@ import {
 import { useRef } from "react";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { FaMoon, FaSun } from "react-icons/fa";
+import HeaderButton from "./Button";
 
 const Header: React.FC = () => {
   const ref = useRef<HTMLDivElement | null>(null);
@@ -35,7 +36,7 @@ const Header: React.FC = () => {
           <Flex
             justify="flex-end"
             w="full"
-            maxW="1024px"
+            maxW="1050px"
             align="center"
             color="gray.400"
           >
@@ -80,6 +81,7 @@ const Header: React.FC = () => {
               onClick={toggleMode}
               icon={<SwitchIcon />}
             />
+            {HeaderButton}
           </Flex>
         </Flex>
       </Box>
