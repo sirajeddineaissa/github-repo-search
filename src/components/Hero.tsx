@@ -11,7 +11,7 @@ const Hero: React.FC = () => {
         <Heading
           mb={6}
           fontSize={{ base: "4xl", md: "6xl" }}
-          fontWeight="bold"
+          fontWeight="extrabold"
           lineHeight="none"
           letterSpacing={{ base: "normal", md: "tight" }}
           color="gray.900"
@@ -47,7 +47,7 @@ const Hero: React.FC = () => {
             size="lg"
             cursor="pointer"
           >
-            Get Started
+            Get Started 
           </Button>
           <Button
             href="https://github.com/sirajeddineaissa/github-repo-search"

@@ -7,7 +7,8 @@ import {
   Link,
   IconButton,
   Icon,
-  useColorMode
+  useColorMode,
+  Image
 } from "@chakra-ui/react";
 import { useRef } from "react";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
@@ -33,6 +34,19 @@ const Header: React.FC = () => {
       ></Heading>
       <Box h="4.5rem" mx="auto" maxW="1200px">
         <Flex w="full" h="full" px="6" align="center" justify="space-between">
+          <Flex align="center">
+            <Link href="/">
+              <HStack>
+                <Image
+                  src={require("./../../assets/logo.png")}
+                  alt="logo"
+                  height="90px"
+                  width="90px"
+                  _dark={{ filter: "brightness(0) invert(1)" }}
+                />
+              </HStack>
+            </Link>
+          </Flex>
           <Flex
             justify="flex-end"
             w="full"
