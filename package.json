@@ -1,7 +1,14 @@
 {
   "name": "github-repo-search",
+  "author": "sirajeddineaissa",
+  "description": "A web-based interface solution that allows users to search GitHub repositories and filter them by username.",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=14.0.0",
+    "yarn": ">=1.22.0",
+    "npm": "please-use-yarn"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
