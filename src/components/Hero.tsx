@@ -17,15 +17,7 @@ const Hero: React.FC = () => {
           color="gray.900"
           _dark={{ color: "gray.100" }}
         >
-          <Text
-            display={{ base: "block", lg: "inline" }}
-            w="full"
-            bgClip="text"
-            color="black"
-            fontWeight="extrabold"
-          >
-            GitHub Repo Search
-          </Text>
+          GitHub Repo Search
         </Heading>
         <Text
           px={{ base: 0, lg: 24 }}
