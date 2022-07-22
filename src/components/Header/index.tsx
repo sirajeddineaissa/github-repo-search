@@ -1,19 +1,21 @@
 import {
   Box,
-  Heading,
-  useColorModeValue,
   Flex,
+  Heading,
   HStack,
-  Link,
-  IconButton,
   Icon,
+  IconButton,
+  Image,
+  Link,
   useColorMode,
-  Image
+  useColorModeValue,
+  useDisclosure
 } from "@chakra-ui/react";
 import { useRef } from "react";
-import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
+import { AiFillGithub, AiFillLinkedin, AiOutlineMenu } from "react-icons/ai";
 import { FaMoon, FaSun } from "react-icons/fa";
 import HeaderButton from "./Button";
+import MobileHeader from "./mobile-header";
 
 const Header: React.FC = () => {
   const ref = useRef<HTMLDivElement | null>(null);
@@ -22,6 +24,8 @@ const Header: React.FC = () => {
   const SwitchIcon = useColorModeValue(FaMoon, FaSun);
   const mode = useColorModeValue("dark", "light");
   const { toggleColorMode: toggleMode } = useColorMode();
+
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <Box pos="relative">
@@ -96,8 +100,19 @@ const Header: React.FC = () => {
               icon={<SwitchIcon />}
             />
             {HeaderButton}
+            <IconButton
+              display={{ base: "flex", md: "none" }}
+              aria-label="Open menu"
+              fontSize="20px"
+              color="gray.800"
+              _dark={{ color: "inherit" }}
+              variant="ghost"
+              icon={<AiOutlineMenu />}
+              onClick={onOpen}
+            />
           </Flex>
         </Flex>
+        <MobileHeader isOpen={isOpen} onClose={onClose} />
       </Box>
     </Box>
   );
