@@ -5,10 +5,9 @@ import {
   VStack
 } from "@chakra-ui/react";
 
-
 interface MobileHeaderProps {
   isOpen: boolean;
-  onClose: () => void;
+  onClose: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 const MobileHeader: React.FC<MobileHeaderProps> = (props) => {

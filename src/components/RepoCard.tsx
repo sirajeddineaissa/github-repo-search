@@ -4,8 +4,6 @@ import {
   Box,
   Text,
   useColorModeValue,
-  Badge,
-  Stack,
   HStack,
   useDisclosure,
   Modal,
@@ -18,9 +16,21 @@ import {
   Button
 } from "@chakra-ui/react";
 import { AiOutlineFork } from "react-icons/ai";
-import { FaBullseye, FaLanguage, FaStar } from "react-icons/fa";
+import { FaBullseye, FaStar } from "react-icons/fa";
 
-const RepoCard: React.FC = (props: any) => {
+interface RepoCardProps {
+  avatar: string;
+  name: string;
+  username: string;
+  description: string;
+  URL: string;
+  language: string;
+  stars: number;
+  forks: number;
+  watchers: number;
+}
+
+const RepoCard: React.FC<RepoCardProps> = (props) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
@@ -35,12 +45,7 @@ const RepoCard: React.FC = (props: any) => {
         textAlign={"center"}
         onClick={onOpen}
       >
-        <Avatar
-          size={"xl"}
-          src={props.avatar}
-          mb={4}
-          pos={"relative"}
-        />
+        <Avatar size={"xl"} src={props.avatar} mb={4} pos={"relative"} />
         <Heading fontSize={"l"} fontFamily={"body"}>
           {props.name}
         </Heading>
@@ -89,9 +94,7 @@ const RepoCard: React.FC = (props: any) => {
               </Button>
             </a>
             <HStack mt={5} fontSize={"small"} spacing={10}>
-              <Box>
-                {props.language}
-              </Box>
+              <Box>{props.language}</Box>
               <Box>
                 <FaStar />
                 {props.stars}

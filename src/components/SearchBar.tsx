@@ -10,7 +10,7 @@ const SearchBar: React.FC = () => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setUsername(e.target.value);
   };
-  const handleClick = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleClick: React.MouseEventHandler<HTMLButtonElement> = (e) => {
     e.preventDefault();
     searchRepos();
   };
