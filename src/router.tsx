@@ -7,7 +7,6 @@ const Router: React.FC = () => {
     <Routes>
       <Route path="/" element={<Main />} />
       <Route path="/search" element={<Search />} />
-      <Route path="/search/:user" element={<Search />} />
     </Routes>
   );
 };
