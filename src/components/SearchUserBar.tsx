@@ -1,27 +1,24 @@
 import { FormControl, Input, Button, SimpleGrid } from "@chakra-ui/react";
-import axios from "axios";
-import { useState } from "react";
 import RepoCard from "./RepoCard";
 
-const SearchBar: React.FC = () => {
-  const [username, setUsername] = useState("");
-  const [loading, setLoading] = useState(false);
-  const [repos, setRepos] = useState([]);
+interface SearchUserBarProps {
+  setUsername: React.Dispatch<React.SetStateAction<string>>;
+  searchRepos: () => void;
+  loading: boolean;
+  repos: any[];
+}
+const SearchUserBar: React.FC<SearchUserBarProps> = (props) => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setUsername(e.target.value);
+    props.setUsername(e.target.value);
   };
   const handleClick: React.MouseEventHandler<HTMLButtonElement> = (e) => {
     e.preventDefault();
-    searchRepos();
+    props.searchRepos();
+  };
+  const onEnterPress: React.KeyboardEventHandler<HTMLInputElement> = (e) => {
+    if (e.key === "Enter") props.searchRepos();
   };
 
-  const searchRepos = () => {
-    setLoading(true);
-    axios(`https://api.github.com/users/${username}/repos`).then((res) => {
-      setLoading(false);
-      setRepos(res.data);
-    });
-  };
   const showRepos = (repo: any) => {
     return (
       <RepoCard
@@ -45,8 +42,8 @@ const SearchBar: React.FC = () => {
           mt={200}
           size="lg"
           placeholder="Type a GitHub username"
-          value={username}
           onChange={handleChange}
+          onKeyDown={onEnterPress}
           required
         />
         <Button
@@ -57,7 +54,7 @@ const SearchBar: React.FC = () => {
           cursor="pointer"
           onClick={handleClick}
         >
-          {loading ? "Searching..." : "Search"}
+          {props.loading ? "Searching..." : "Search"}
         </Button>
         <SimpleGrid
           mt={50}
@@ -65,11 +62,11 @@ const SearchBar: React.FC = () => {
           gap={6}
           minChildWidth="120px"
         >
-          {repos.map(showRepos)}
+          {props.repos.map(showRepos)}
         </SimpleGrid>
       </FormControl>
     </>
   );
 };
 
-export default SearchBar;
+export default SearchUserBar;
