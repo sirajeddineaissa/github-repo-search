@@ -33,6 +33,8 @@ const SearchBar: React.FC = () => {
         stars={repo.stargazers_count}
         forks={repo.forks_count}
         watchers={repo.watchers_count}
+        URL={repo.html_url}
+        language={repo.language}
       />
     );
   };
