@@ -1,4 +1,5 @@
-import { Box, Button, Stack, Text, Heading } from "@chakra-ui/react";
+import { Box, Button, Heading, Stack, Text } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 const Hero: React.FC = () => {
   return (
@@ -35,20 +36,21 @@ const Hero: React.FC = () => {
           spacing={2}
           justifyContent={{ sm: "left", md: "center" }}
         >
-          <Button
-            as="a"
-            variant="solid"
-            colorScheme="blue"
-            display="inline-flex"
-            alignItems="center"
-            justifyContent="center"
-            w={{ base: "full", sm: "auto" }}
-            mb={{ base: 2, sm: 0 }}
-            size="lg"
-            cursor="pointer"
-          >
-            Get Started 
-          </Button>
+          <Link to="/search">
+            <Button
+              variant="solid"
+              colorScheme="blue"
+              display="inline-flex"
+              alignItems="center"
+              justifyContent="center"
+              w={{ base: "full", sm: "auto" }}
+              mb={{ base: 2, sm: 0 }}
+              size="lg"
+              cursor="pointer"
+            >
+              Get Started
+            </Button>
+          </Link>
           <Button
             href="https://github.com/sirajeddineaissa/github-repo-search"
             target="_blank"

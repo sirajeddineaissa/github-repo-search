@@ -1,12 +1,15 @@
 import React from "react";
-import Hero from "./components/Hero";
 import Header from "./components/Header";
+import { BrowserRouter } from "react-router-dom";
+import Router from "./router";
 
 const App: React.FC = () => {
   return (
     <>
-      <Header />
-      <Hero />
+      <BrowserRouter>
+        <Header />
+        <Router />
+      </BrowserRouter>
     </>
   );
 };

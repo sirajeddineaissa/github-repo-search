@@ -4,8 +4,7 @@ import {
   useColorModeValue,
   VStack
 } from "@chakra-ui/react";
-import { FaLinkedin } from "react-icons/fa";
-import HeaderButton from "./Button";
+
 
 interface MobileHeaderProps {
   isOpen: boolean;
