@@ -38,7 +38,6 @@ const RepoCard: React.FC = (props: any) => {
         <Avatar
           size={"xl"}
           src={props.avatar}
-          alt={props.username}
           mb={4}
           pos={"relative"}
         />
