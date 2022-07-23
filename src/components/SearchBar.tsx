@@ -30,6 +30,9 @@ const SearchBar: React.FC = () => {
         username={repo.owner.login}
         avatar={repo.owner.avatar_url}
         description={repo.description}
+        stars={repo.stargazers_count}
+        forks={repo.forks_count}
+        watchers={repo.watchers_count}
       />
     );
   };

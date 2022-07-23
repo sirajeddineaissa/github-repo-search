@@ -3,8 +3,13 @@ import {
   Avatar,
   Box,
   Text,
-  useColorModeValue
+  useColorModeValue,
+  Badge,
+  Stack,
+  HStack
 } from "@chakra-ui/react";
+import { AiOutlineFork } from "react-icons/ai";
+import { FaBullseye, FaStar } from "react-icons/fa";
 
 const RepoCard: React.FC = (props: any) => {
   return (
@@ -34,10 +39,23 @@ const RepoCard: React.FC = (props: any) => {
         fontSize={13}
         textAlign={"center"}
         color={useColorModeValue("gray.700", "gray.400")}
-        
       >
         {props.description ? props.description : "No Description."}
       </Text>
+      <HStack mt={5} fontSize={"md"} spacing={20}>
+        <Box>
+          <FaStar />
+          {`${props.stars}`}
+        </Box>
+        <Box>
+          <AiOutlineFork />
+          {`${props.forks}`}
+        </Box>
+        <Box>
+          <FaBullseye />
+          {`${props.watchers}`}
+        </Box>
+      </HStack>
     </Box>
   );
 };
