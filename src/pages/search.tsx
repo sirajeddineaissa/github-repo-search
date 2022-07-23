@@ -7,27 +7,35 @@ const Search: React.FC = () => {
   const [username, setUsername] = useState("");
   const [loading, setLoading] = useState(false);
   const [repos, setRepos] = useState([]);
+  const [invoke, setInvoke] = useState(false);
   const searchRepos = () => {
     setLoading(true);
     axios(`https://api.github.com/users/${username}/repos`)
       .then((res) => {
         setLoading(false);
+        setInvoke(true);
         setRepos(res.data);
       })
-      .catch((error) => {
-        console.log(error);
+      .catch((err) => {
+        setLoading(false);
+        console.log(err);
       });
   };
   return (
     <>
-      <SearchUserBar
-        setUsername={setUsername}
-        loading={loading}
-        repos={repos}
-        searchRepos={searchRepos}
-      />
-
-      <SearchRepoBar repos={repos} />
+      {invoke ? (
+        <>
+          <SearchRepoBar repos={repos} size={"md"} />
+        </>
+      ) : (
+        <SearchUserBar
+          setUsername={setUsername}
+          loading={loading}
+          repos={repos}
+          searchRepos={searchRepos}
+          size={"3xl"}
+        />
+      )}
     </>
   );
 };

@@ -36,7 +36,6 @@ const RepoCard: React.FC<RepoCardProps> = (props) => {
   return (
     <>
       <Box
-        maxW={"420px"}
         w={"full"}
         bg={useColorModeValue("white", "gray.900")}
         boxShadow={"2xl"}

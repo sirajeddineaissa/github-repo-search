@@ -1,9 +1,17 @@
-import { Button, FormControl, Input, SimpleGrid } from "@chakra-ui/react";
+import {
+  Button,
+  Center,
+  FormControl,
+  HStack,
+  Input,
+  SimpleGrid
+} from "@chakra-ui/react";
 import { useState } from "react";
 import RepoCard from "./RepoCard";
 
 interface SearchRepoBarProps {
   repos: any[];
+  size: string;
 }
 const SearchRepoBar: React.FC<SearchRepoBarProps> = (props) => {
   const [input, setInput] = useState("");
@@ -34,30 +42,33 @@ const SearchRepoBar: React.FC<SearchRepoBarProps> = (props) => {
   };
 
   return (
-    <FormControl w={{ base: "full", md: 7 / 12 }} pt={1} mx="auto" mb={8}>
-      <Input
-        mt={200}
-        size="lg"
-        placeholder="Type a GitHub repository"
-        onChange={inputHandler}
-        required
-      />
-      <Button
-        variant="solid"
-        size="lg"
-        type="submit"
-        colorScheme="blue"
-        cursor="pointer"
-      ></Button>
-      <SimpleGrid
-        mt={50}
-        templateColumns="repeat(3, 1fr)"
-        gap={6}
-        minChildWidth="120px"
-      >
-        {" "}
-        {filteredRepos.map(showFilteredData)}
-      </SimpleGrid>
+    <FormControl w={["sm", "md", props.size]} pt={1} mx="auto" mb={8}>
+      <HStack mt={200}>
+        <Input
+          size="lg"
+          placeholder="Type a GitHub repository"
+          onChange={inputHandler}
+          required
+        />
+        <Button
+          variant="solid"
+          size="lg"
+          type="submit"
+          colorScheme="blue"
+          cursor="pointer"
+        >Search</Button>
+      </HStack>
+      <Center>
+        <SimpleGrid
+          alignContent={"center"}
+          mt={50}
+          templateColumns="repeat(4, 1fr)"
+          gap={6}
+          minChildWidth="120px"
+        >
+          {filteredRepos.map(showFilteredData)}
+        </SimpleGrid>
+      </Center>
     </FormControl>
   );
 };

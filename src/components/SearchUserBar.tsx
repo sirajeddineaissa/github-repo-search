@@ -1,4 +1,11 @@
-import { FormControl, Input, Button, SimpleGrid } from "@chakra-ui/react";
+import {
+  FormControl,
+  Input,
+  Button,
+  SimpleGrid,
+  HStack,
+  Center
+} from "@chakra-ui/react";
 import RepoCard from "./RepoCard";
 
 interface SearchUserBarProps {
@@ -6,9 +13,11 @@ interface SearchUserBarProps {
   searchRepos: () => void;
   loading: boolean;
   repos: any[];
+  size: string;
 }
 const SearchUserBar: React.FC<SearchUserBarProps> = (props) => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    e.preventDefault();
     props.setUsername(e.target.value);
   };
   const handleClick: React.MouseEventHandler<HTMLButtonElement> = (e) => {
@@ -18,7 +27,6 @@ const SearchUserBar: React.FC<SearchUserBarProps> = (props) => {
   const onEnterPress: React.KeyboardEventHandler<HTMLInputElement> = (e) => {
     if (e.key === "Enter") props.searchRepos();
   };
-
   const showRepos = (repo: any) => {
     return (
       <RepoCard
@@ -35,35 +43,39 @@ const SearchUserBar: React.FC<SearchUserBarProps> = (props) => {
       />
     );
   };
+
   return (
     <>
-      <FormControl w={{ base: "full", md: 7 / 12 }} pt={1} mx="auto" mb={8}>
-        <Input
-          mt={200}
-          size="lg"
-          placeholder="Type a GitHub username"
-          onChange={handleChange}
-          onKeyDown={onEnterPress}
-          required
-        />
-        <Button
-          variant="solid"
-          size="lg"
-          type="submit"
-          colorScheme="blue"
-          cursor="pointer"
-          onClick={handleClick}
-        >
-          {props.loading ? "Searching..." : "Search"}
-        </Button>
-        <SimpleGrid
-          mt={50}
-          templateColumns="repeat(3, 1fr)"
-          gap={6}
-          minChildWidth="120px"
-        >
-          {props.repos.map(showRepos)}
-        </SimpleGrid>
+      <FormControl w={["sm", "md", props.size]} pt={1} mx="auto" mb={8}>
+        <HStack mt={200}>
+          <Input
+            size="lg"
+            placeholder="Type a GitHub username"
+            onChange={handleChange}
+            onKeyDown={onEnterPress}
+            required
+          />
+          <Button
+            variant="solid"
+            size="lg"
+            type="submit"
+            colorScheme="blue"
+            cursor="pointer"
+            onClick={handleClick}
+          >
+            {props.loading ? "Searching..." : "Search"}
+          </Button>
+        </HStack>
+        <Center>
+          <SimpleGrid
+            mt={50}
+            templateColumns="repeat(4, 1fr)"
+            gap={6}
+            minChildWidth="120px"
+          >
+            {props.repos.map(showRepos)}
+          </SimpleGrid>
+        </Center>
       </FormControl>
     </>
   );
