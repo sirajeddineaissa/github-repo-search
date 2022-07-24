@@ -14,12 +14,12 @@ import RepoCard from "./RepoCard";
 const SearchRepoBar: React.FC = () => {
   const [input, setInput] = useState("");
   const [isMobile] = useMediaQuery("(max-width: 768px)");
-  const  repos  = useContext(reposContext);
+  const repos = useContext(reposContext) as unknown as Array<any>;
   const inputHandler = (e: any) => {
     setInput(e.target.value.toLowerCase());
   };
 
-  const filteredRepos = repos?.filter((item: any) => { 
+  const filteredRepos = repos?.filter((item: any) => {
     if (input === "") return item;
 
     return item.name.toLowerCase().includes(input);
@@ -71,7 +71,7 @@ const SearchRepoBar: React.FC = () => {
           minChildWidth={300}
           templateColumns={isMobile ? "" : "repeat(3,1fr)"}
         >
-          {filteredRepos.map(showFilteredData)}
+          {filteredRepos?.map(showFilteredData)}
         </SimpleGrid>
       </Center>
     </>

@@ -29,6 +29,4 @@ Primary.args = {
       language: "TypeScript"
     }
   ],
-  size: "md"
 };
-
