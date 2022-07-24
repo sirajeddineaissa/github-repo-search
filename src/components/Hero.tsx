@@ -1,8 +1,19 @@
-import { Box, Button, Heading, HStack, Stack, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Heading,
+  HStack,
+  Stack,
+  Text,
+  Image,
+  useMediaQuery
+} from "@chakra-ui/react";
 import { FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Hero: React.FC = () => {
+  const [isMobile] = useMediaQuery("(max-width: 768px)");
+
   return (
     <Box px={8} py={24} mx="auto">
       <Box
@@ -17,7 +28,9 @@ const Hero: React.FC = () => {
           lineHeight="none"
           letterSpacing={{ base: "normal", md: "tight" }}
           color="gray.900"
+          textAlign={"center"}
           _dark={{ color: "gray.100" }}
+          
         >
           GitHub Repo Search
         </Heading>
@@ -80,7 +93,18 @@ const Hero: React.FC = () => {
         mx="auto"
         mt={20}
         textAlign="center"
-      ></Box>
+      >
+        <Image
+          w="full"
+          rounded="lg"
+          src={
+            isMobile
+              ? require("../assets/mobile-preview.jpg")
+              : require("../assets/desktop-preview.jpg")
+          }
+          alt="Github Repo Search Preview"
+        />
+      </Box>
     </Box>
   );
 };
