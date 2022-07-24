@@ -30,7 +30,6 @@ Primary.args = {
       language: "TypeScript"
     }
   ],
-  size: "md"
 };
 
 export const Secondary = Template.bind({});
@@ -52,5 +51,4 @@ Secondary.args = {
       language: "TypeScript"
     }
   ],
-  size: "md"
 };

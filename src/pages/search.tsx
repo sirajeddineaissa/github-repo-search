@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import SearchRepoBar from "../components/SearchRepoBar";
 import SearchUserBar from "../components/SearchUserBar";
+import { reposContext } from "../context/reposContext";
 
 const Search: React.FC = () => {
   const [username, setUsername] = useState("");
@@ -23,21 +24,19 @@ const Search: React.FC = () => {
   };
   console.log(repos);
   return (
-    <>
+    <reposContext.Provider value={repos}>
       {invoke ? (
         <>
-          <SearchRepoBar repos={repos} size={"md"} />
+          <SearchRepoBar />
         </>
       ) : (
         <SearchUserBar
           setUsername={setUsername}
           loading={loading}
-          repos={repos}
           searchRepos={searchRepos}
-          size={"3xl"}
         />
       )}
-    </>
+    </reposContext.Provider>
   );
 };
 
