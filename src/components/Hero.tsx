@@ -1,4 +1,5 @@
-import { Box, Button, Heading, Stack, Text } from "@chakra-ui/react";
+import { Box, Button, Heading, HStack, Stack, Text } from "@chakra-ui/react";
+import { FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Hero: React.FC = () => {
@@ -65,7 +66,12 @@ const Hero: React.FC = () => {
             size="lg"
             cursor="pointer"
           >
-            Star Repo ⭐
+            <HStack>
+              <Box>Star Repo</Box>
+              <Box>
+                <FaStar color="yellow" />
+              </Box>
+            </HStack>
           </Button>
         </Stack>
       </Box>
