@@ -1,7 +1,7 @@
 <div align="center">
-    <img src="./src/assets/logo.png" alt="Logo" width="80" height="80">
+    <img src="./src/assets/logo.png">
 
-  <h3 align="center">GitHub Repo Search</h3>
+  <h2 align="center">GitHub Repo Search</h2>
 
   <p align="center">
 A web-based interface solution that allows users to search GitHub repositories and filter them by username.    <br />
@@ -40,7 +40,7 @@ A web-based interface solution that allows users to search GitHub repositories a
 
 ## About The Project
 
-[![Showcase Project]](./src/assets/readme-images/showcase.jpg)
+![Showcase Project](./src/assets/readme-images/showcase.jpg)
 
 A web-based interface solution that allows users to search GitHub repositories and filter them by username.
 
@@ -48,8 +48,8 @@ A web-based interface solution that allows users to search GitHub repositories a
 
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
-- [![React][https://reactjs.org]]
-- [![ChakraUI][https://chakra-ui.com]]
+- ![React](https://camo.githubusercontent.com/67a01fa7cf337616274f39c070a11638f2e65720e414ef55b8dd3f9c2a803b2a/68747470733a2f2f696d672e736869656c64732e696f2f7374617469632f76313f7374796c653d666f722d7468652d6261646765266d6573736167653d526561637426636f6c6f723d323232323232266c6f676f3d5265616374266c6f676f436f6c6f723d363144414642266c6162656c3d)
+- ![ChakraUI](https://camo.githubusercontent.com/9be161579f0737f301d45929820470e22ad2af41a92524b150dca40fce3c765d/68747470733a2f2f696d672e736869656c64732e696f2f7374617469632f76313f7374796c653d666f722d7468652d6261646765266d6573736167653d4368616b72612b554926636f6c6f723d333139373935266c6f676f3d4368616b72612b5549266c6f676f436f6c6f723d464646464646266c6162656c3d)
 
 ## Getting Started
 
@@ -75,6 +75,16 @@ Use the Yarn Package Manager
    ```
 
 ## Usage
+
+![Homepage](./src/assets/readme-images/usage-1.jpg)
+<br />
+![Search Users](./src/assets/readme-images/usage-2.jpg)
+<br />
+![Search Repositories](./src/assets/readme-images/usage-3.jpg)
+<br />
+![View Repositories via Modal](./src/assets/readme-images/usage-4.jpg)
+<br />
+![Enable Dark Mode](./src/assets/readme-images/dark-mode.jpg)
 
 ## Roadmap
 
