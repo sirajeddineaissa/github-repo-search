@@ -2,11 +2,12 @@ import axios from "axios";
 import { useState } from "react";
 import SearchRepoBar from "../components/SearchRepoBar";
 import SearchUserBar from "../components/SearchUserBar";
+import { reposContext, reposContextProps } from "../context/reposContext";
 
 const Search: React.FC = () => {
   const [username, setUsername] = useState("");
   const [loading, setLoading] = useState(false);
-  const [repos, setRepos] = useState([]);
+  const [repos, setRepos] = useState<reposContextProps | null>(null);
   const [invoke, setInvoke] = useState(false);
   const searchRepos = () => {
     setLoading(true);
@@ -22,21 +23,19 @@ const Search: React.FC = () => {
       });
   };
   return (
-    <>
+    <reposContext.Provider value={repos}>
       {invoke ? (
         <>
-          <SearchRepoBar repos={repos} size={"md"} />
+          <SearchRepoBar />
         </>
       ) : (
         <SearchUserBar
           setUsername={setUsername}
           loading={loading}
-          repos={repos}
           searchRepos={searchRepos}
-          size={"3xl"}
         />
       )}
-    </>
+    </reposContext.Provider>
   );
 };
 
