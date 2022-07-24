@@ -13,7 +13,8 @@ import {
   ModalHeader,
   ModalBody,
   ModalFooter,
-  Button
+  Button,
+  Center
 } from "@chakra-ui/react";
 import { AiOutlineFork } from "react-icons/ai";
 import { FaBullseye, FaStar } from "react-icons/fa";
@@ -36,18 +37,18 @@ const RepoCard: React.FC<RepoCardProps> = (props) => {
   return (
     <>
       <Box
-        w={"full"}
+        minWidth={200}
+        h={400}
+        w={320}
         bg={useColorModeValue("white", "gray.900")}
         boxShadow={"2xl"}
         rounded={"lg"}
-        p={6}
         textAlign={"center"}
         onClick={onOpen}
+        p={10}
       >
         <Avatar size={"xl"} src={props.avatar} mb={4} pos={"relative"} />
-        <Heading fontSize={"l"} fontFamily={"body"}>
-          {props.name}
-        </Heading>
+        <Heading fontSize={"l"}>{props.name}</Heading>
         <Text fontSize={"sm"} fontWeight={500} color={"gray.500"} mb={4}>
           {props.username}
         </Text>
@@ -58,20 +59,22 @@ const RepoCard: React.FC<RepoCardProps> = (props) => {
         >
           {props.description ? props.description : "No Description."}
         </Text>
-        <HStack mt={5} fontSize={"md"} spacing={20}>
-          <Box>
-            <FaStar />
-            {props.stars}
-          </Box>
-          <Box>
-            <AiOutlineFork />
-            {props.forks}
-          </Box>
-          <Box>
-            <FaBullseye />
-            {props.watchers}
-          </Box>
-        </HStack>
+        <Center>
+          <HStack mt={6} fontSize={"md"} spacing={20}>
+            <Box>
+              <FaStar color={props.stars ? "gold" : ""} />
+              {props.stars}
+            </Box>
+            <Box>
+              <AiOutlineFork color={props.forks ? "#E460C3" : ""} />
+              {props.forks}
+            </Box>
+            <Box>
+              <FaBullseye color={props.watchers ? "#E83852" : ""} />
+              {props.watchers}
+            </Box>
+          </HStack>
+        </Center>
       </Box>
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
@@ -82,28 +85,28 @@ const RepoCard: React.FC<RepoCardProps> = (props) => {
             {props.description ? props.description : "No Description."}
           </ModalBody>
           <ModalFooter>
-            <a href={props.URL} target="_blank" rel="noopener noreferrer">
-              <Button
-                fontSize={"small"}
-                colorScheme="blue"
-                mr={3}
-                onClick={onClose}
-              >
-                View Repository
-              </Button>
-            </a>
-            <HStack mt={5} fontSize={"small"} spacing={10}>
-              <Box>{props.language}</Box>
+            <HStack mt={4} mr={6} fontSize={"small"} spacing={12}>
+              <a href={props.URL} target="_blank" rel="noopener noreferrer">
+                <Button
+                  mr={16}
+                  fontSize={"small"}
+                  colorScheme="blue"
+                  onClick={onClose}
+                >
+                  View Repository
+                </Button>
+              </a>
+              {/* <Box>{props.language}</Box> */}
               <Box>
-                <FaStar />
+                <FaStar color={props.stars ? "gold" : ""} />
                 {props.stars}
               </Box>
               <Box>
-                <AiOutlineFork />
+                <AiOutlineFork color={props.forks ? "#E460C3" : ""} />
                 {props.forks}
               </Box>
               <Box>
-                <FaBullseye />
+                <FaBullseye color={props.watchers ? "#E83852" : ""} />
                 {props.watchers}
               </Box>
             </HStack>

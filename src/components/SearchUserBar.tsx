@@ -1,10 +1,10 @@
 import {
-  FormControl,
-  Input,
   Button,
-  SimpleGrid,
+  Center,
+  FormControl,
   HStack,
-  Center
+  Input,
+  SimpleGrid
 } from "@chakra-ui/react";
 import RepoCard from "./RepoCard";
 
@@ -67,12 +67,7 @@ const SearchUserBar: React.FC<SearchUserBarProps> = (props) => {
           </Button>
         </HStack>
         <Center>
-          <SimpleGrid
-            mt={50}
-            templateColumns="repeat(4, 1fr)"
-            gap={6}
-            minChildWidth="120px"
-          >
+          <SimpleGrid mt={50} gap={6}>
             {props.repos.map(showRepos)}
           </SimpleGrid>
         </Center>

@@ -44,8 +44,7 @@ const Header: React.FC = () => {
                 <Image
                   src={require("./../../assets/logo.png")}
                   alt="logo"
-                  height="90px"
-                  width="90px"
+                  boxSize={90}
                   _dark={{ filter: "brightness(0) invert(1)" }}
                 />
               </HStack>
