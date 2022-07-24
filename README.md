@@ -1,46 +1,98 @@
-# Getting Started with Create React App
+<div align="center">
+    <img src="./src/assets/logo.png" alt="Logo" width="80" height="80">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  <h3 align="center">GitHub Repo Search</h3>
 
-## Available Scripts
+  <p align="center">
+A web-based interface solution that allows users to search GitHub repositories and filter them by username.    <br />
+    <br />
+    <br />
+    <a href="https://mvst-project.netlify.app">View Demo</a>
+    ·
+    <a href="https://github.com/sirajeddineaissa/github-repo-search/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/sirajeddineaissa/github-repo-search/issues">Request Feature</a>
+  </p>
+</div>
 
-In the project directory, you can run:
+<details>
+  <summary>Table of Content</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#technologies">Technologies</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contribute">Contribute</a></li>
+    <li><a href="#license">License</a></li>
+  </ol>
+</details>
 
-### `npm start`
+## About The Project
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+[![Showcase Project]](./src/assets/readme-images/showcase.jpg)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+A web-based interface solution that allows users to search GitHub repositories and filter them by username.
 
-### `npm test`
+### Technologies
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
-### `npm run build`
+- [![React][https://reactjs.org]]
+- [![ChakraUI][https://chakra-ui.com]]
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Prerequisites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Use the Yarn Package Manager
 
-### `npm run eject`
+- Install Yarn
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```sh
+ npm install -g yarn
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Installation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+1. Clone the repository
+   ```sh
+   git clone https://github.com/sirajeddineaissa/github-repo-search
+   ```
+2. Install dependencies
+   ```sh
+   yarn install
+   ```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Usage
 
-## Learn More
+## Roadmap
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- [x] Added Light/Dark Mode support
+- [x] Added GitHub user search feature
+- [x] Added GitHub repository search and filtering feature
+- [ ] Make it possible to see similar repositories to the searched repository
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Contribute
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/feature-name`)
+3. Commit your Changes (`git commit -m 'commit text here'`)
+4. Push to the Branch (`git push origin feature/feature-name`)
+5. Open a Pull Request
+
+Make sure you give this project a ⭐.
+
+## License
+
+Distributed under the MIT License. Check `LICENSE.txt` for more information.
