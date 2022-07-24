@@ -21,6 +21,7 @@ const Search: React.FC = () => {
         console.log(err);
       });
   };
+  console.log(repos);
   return (
     <>
       {invoke ? (

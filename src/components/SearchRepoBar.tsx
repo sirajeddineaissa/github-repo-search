@@ -73,6 +73,7 @@ const SearchRepoBar: React.FC<SearchRepoBarProps> = (props) => {
           templateColumns={isMobile ? "" : "repeat(3,1fr)"}
         >
           {filteredRepos.map(showFilteredData)}
+          
         </SimpleGrid>
       </Center>
     </>
