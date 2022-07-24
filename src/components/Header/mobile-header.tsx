@@ -39,7 +39,7 @@ const MobileHeader: React.FC<MobileHeaderProps> = (props) => {
         as="a"
         colorScheme="blue"
         aria-label="Read more about the project on GitHub"
-        href=""
+        href="https://github.com/sirajeddineaissa/github-repo-search/blob/main/README.md"
         target="_blank"
         rel="noopener noreferrer"
       >
