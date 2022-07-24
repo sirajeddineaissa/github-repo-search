@@ -40,7 +40,7 @@ A web-based interface solution that allows users to search GitHub repositories a
 
 ## About The Project
 
-![Showcase Project](./src/assets/readme-images/showcase.jpg)
+![Showcase Project](/src/assets/readme-images/showcase.jpg)
 
 A web-based interface solution that allows users to search GitHub repositories and filter them by username.
 
@@ -76,15 +76,15 @@ Use the Yarn Package Manager
 
 ## Usage
 
-![Homepage](./src/assets/readme-images/usage-1.jpg)
+![Homepage](/src/assets/readme-images/usage-1.jpg)
 <br />
-![Search Users](./src/assets/readme-images/usage-2.jpg)
+![Search Users](/src/assets/readme-images/usage-2.jpg)
 <br />
-![Search Repositories](./src/assets/readme-images/usage-3.jpg)
+![Search Repositories](/src/assets/readme-images/usage-3.jpg)
 <br />
-![View Repositories via Modal](./src/assets/readme-images/usage-4.jpg)
+![View Repositories via Modal](/src/assets/readme-images/usage-4.jpg)
 <br />
-![Enable Dark Mode](./src/assets/readme-images/dark-mode.jpg)
+![Enable Dark Mode](/src/assets/readme-images/dark-mode.jpg)
 
 ## Roadmap
 
