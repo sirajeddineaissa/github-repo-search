@@ -1,7 +1,7 @@
 {
   "name": "github-repo-search",
   "author": "sirajeddineaissa",
-  "description": "A web-based interface solution that allows users to search GitHub repositories and filter them by username.",
+  "description": "GitHub Repo Search is a web-based solution that allows users to search GitHub profiles and go through their GitHub repositories.",
   "version": "0.1.0",
   "private": true,
   "engines": {

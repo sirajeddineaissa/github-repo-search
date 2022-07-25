@@ -25,7 +25,7 @@
 
 ![Showcase Project](/src/assets/readme-images/showcase.jpg)
 
-GitHub Repo Search is a web-based interface solution that allows users to search GitHub repositories and filter them by GitHub usernames. It also allows the user to view some of the data related to each repositories (title, description, stars...) and redirect them to the selected project repository.
+GitHub Repo Search is a web-based solution that allows users to search GitHub profiles and go through their GitHub repositories. It also allows users to view some of the data related to each repository (title, description, stars...) and redirect them to its URL.
 
 ### Technologies
 

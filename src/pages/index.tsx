@@ -39,8 +39,7 @@ const Hero: React.FC = () => {
           textAlign={"center"}
           _dark={{ color: "gray.300" }}
         >
-          A web-based interface solution that allows users to search GitHub
-          repositories and filter them by username.
+          A web-based solution that allows users to search GitHub profiles and go through their GitHub repositories.
         </Text>
         <Stack
           direction={{ base: "column", sm: "row" }}
