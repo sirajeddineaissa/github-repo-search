@@ -9,11 +9,9 @@
 </div>
 
 <div align="center">
-    <img src="./src/assets/logo.png" alt="logo" height="150px" width="150px">
-
+    <img src="./src/assets/readme-logo.jpg" alt="logo" height="250px" width="250px">
+  <br/>
   <p align="center">
-A web-based interface solution that allows users to search GitHub repositories and filter them by username.   
-  <br />
     <a href="https://mvst-project.netlify.app">View Demo</a>
     ·
     <a href="https://github.com/sirajeddineaissa/github-repo-search/issues">Report Bug</a>
