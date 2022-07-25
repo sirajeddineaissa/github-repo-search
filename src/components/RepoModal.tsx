@@ -42,7 +42,7 @@ const RepoModal: React.FC<RepoModalProps> = (props) => {
           >
             <a href={props.URL} target="_blank" rel="noopener noreferrer">
               <Button
-                mr={{ base: 11, md: 16 }}
+                mr={[16,24]}
                 fontSize={"small"}
                 colorScheme="blue"
                 onClick={props.onClose}
