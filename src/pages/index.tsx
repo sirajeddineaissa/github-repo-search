@@ -12,8 +12,6 @@ import { FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Hero: React.FC = () => {
-  const [isMobile] = useMediaQuery("(max-width: 768px)");
-
   return (
     <Box px={8} py={24} mx="auto">
       <Box

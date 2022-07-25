@@ -7,7 +7,7 @@ import {
   SimpleGrid,
   useMediaQuery
 } from "@chakra-ui/react";
-import { useState, useContext } from "react";
+import { useState, useContext, ReactElement, Component } from "react";
 import { reposContext } from "../context/reposContext";
 import RepoCard from "./RepoCard";
 
@@ -15,16 +15,29 @@ const SearchRepoBar: React.FC = () => {
   const [input, setInput] = useState("");
   const [isMobile] = useMediaQuery("(max-width: 768px)");
   const repos = useContext(reposContext) as unknown as Array<any>;
+
+  /**
+   * Runs on every keystroke typed inside the repo search bar to update the React input state.
+   * @param e
+   */
   const inputHandler = (e: any) => {
     setInput(e.target.value.toLowerCase());
   };
 
+  /**
+   * Filters the repositories of the searched user
+   */
   const filteredRepos = repos?.filter((item: any) => {
     if (input === "") return item;
 
     return item.name.toLowerCase().includes(input);
   });
 
+  /**
+   * Returns a repository card with its data
+   * @param repo
+   * @returns {Component}
+   */
   const showFilteredData = (repo: any) => {
     return (
       <RepoCard
@@ -71,7 +84,7 @@ const SearchRepoBar: React.FC = () => {
           gap={6}
           minChildWidth={300}
           templateColumns={isMobile ? "" : "repeat(3,1fr)"}
-        >
+        > 
           {filteredRepos?.map(showFilteredData)}
         </SimpleGrid>
       </Center>

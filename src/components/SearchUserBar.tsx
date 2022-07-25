@@ -5,15 +5,33 @@ interface SearchUserBarProps {
   searchRepos: () => void;
   loading: boolean;
 }
+
 const SearchUserBar: React.FC<SearchUserBarProps> = (props) => {
+  /**
+   * Runs on every keystroke typed inside the user search bar to update the React username state.
+   * @param e
+   *
+   */
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();
     props.setUsername(e.target.value);
   };
+
+  /**
+   * Runs when the search button is clicked to call the searchRepos() function
+   * @param e
+   *
+   */
   const handleClick: React.MouseEventHandler<HTMLButtonElement> = (e) => {
     e.preventDefault();
     props.searchRepos();
   };
+
+  /**
+   * Runs when the the Enter key is pressed within the user search bar to call the searchRepos() function
+   * @param e
+   *
+   */
   const onEnterPress: React.KeyboardEventHandler<HTMLInputElement> = (e) => {
     if (e.key === "Enter") props.searchRepos();
   };

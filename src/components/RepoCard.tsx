@@ -76,6 +76,9 @@ const RepoCard: React.FC<RepoCardProps> = (props) => {
           </HStack>
         </Center>
       </Box>
+      {/**
+       * The Modal will be displayed when the user clicks on the repository card
+       */}
       <RepoModal
         isOpen={isOpen}
         onClose={onClose}

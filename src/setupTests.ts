@@ -4,6 +4,8 @@
 // learn more: https://github.com/testing-library/jest-dom
 import "@testing-library/jest-dom";
 
+
+//This chunk of code fixes the error : env.window.matchMedia is not a function
 window.matchMedia = (query) => ({
     matches: false,
     media: query,
