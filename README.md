@@ -1,22 +1,26 @@
+<div align="center">
+
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+
+</div>
 
 <div align="center">
-    <img src="./src/assets/logo.png" alt="logo">
+    <img src="./src/assets/logo.png" alt="logo" height="150px" width="150px">
 
   <p align="center">
 A web-based interface solution that allows users to search GitHub repositories and filter them by username.    <br />
     <br />
-    <br />
+
     <a href="https://mvst-project.netlify.app">View Demo</a>
     ·
     <a href="https://github.com/sirajeddineaissa/github-repo-search/issues">Report Bug</a>
     ·
     <a href="https://github.com/sirajeddineaissa/github-repo-search/issues">Request Feature</a>
+
   </p>
 </div>
 
@@ -129,7 +133,7 @@ Distributed under the MIT License. Check `LICENSE` for more information.
 
 ## Feedback About This Exercise
 
-I enjoyed using ChakraUI's stunning visual components to build the front-end. I also learned a lot about TypeScript and how its type-safe capability ensures a smooth and clean coding environment. Besides, It's always good to keep a clean good-qualiy code base. Moreover, I enjoyed playing with Storybook and setting it up to visualize various components within its dashboard. This project was definitely challenging especially when it comes to debugging TypeScript.
+I enjoyed using ChakraUI's stunning visual components to build the front-end. I also learned a lot about TypeScript and how its type-safe capability ensures a smooth and clean coding environment. Besides, It's always good to keep a clean good-qualiy codebase. Moreover, I enjoyed playing with Storybook and setting it up to visualize various components within its dashboard. This project was definitely challenging especially when it comes to debugging TypeScript.
 
 [contributors-shield]: https://img.shields.io/github/contributors/sirajeddineaissa/github-repo-search?style=for-the-badge
 [contributors-url]: https://github.com/sirajeddineaissa/github-repo-search/graphs/contributors
