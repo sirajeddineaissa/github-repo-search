@@ -49,7 +49,7 @@ const Hero: React.FC = () => {
           spacing={2}
           justifyContent={{ sm: "left", md: "center" }}
         >
-          <Link to="/search">
+          <Link role="getstartedbutton" to="/search">
             <Button
               variant="solid"
               colorScheme="blue"
@@ -65,6 +65,7 @@ const Hero: React.FC = () => {
             </Button>
           </Link>
           <Button
+            role="starrepo"
             href="https://github.com/sirajeddineaissa/github-repo-search"
             target="_blank"
             rel="noopener noreferrer"
@@ -101,7 +102,7 @@ const Hero: React.FC = () => {
               ? require("../assets/mobile-preview.jpg")
               : require("../assets/desktop-preview.jpg")
           }
-          alt="Github Repo Search Preview"
+          alt="Homepage Image"
         />
       </Box>
     </Box>

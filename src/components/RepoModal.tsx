@@ -46,17 +46,22 @@ const RepoModal: React.FC<RepoModalProps> = (props) => {
                 View Repository
               </Button>
             </a>
-            {/* <Box>{props.language}</Box> */}
             <Box>
-              <FaStar color={props.stars ? "gold" : ""} />
+              <FaStar role="staricon" color={props.stars ? "gold" : ""} />
               {props.stars}
             </Box>
             <Box>
-              <AiOutlineFork color={props.forks ? "#E460C3" : ""} />
+              <AiOutlineFork
+                role="forkicon"
+                color={props.forks ? "#E460C3" : ""}
+              />
               {props.forks}
             </Box>
             <Box>
-              <FaBullseye color={props.watchers ? "#E83852" : ""} />
+              <FaBullseye
+                role="watchericon"
+                color={props.watchers ? "#E83852" : ""}
+              />
               {props.watchers}
             </Box>
           </HStack>

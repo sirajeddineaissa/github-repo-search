@@ -5,12 +5,10 @@ import Router from "./router";
 
 const App: React.FC = () => {
   return (
-    <>
-      <BrowserRouter>
-        <Header />
-        <Router />
-      </BrowserRouter>
-    </>
+    <BrowserRouter>
+      <Header />
+      <Router />
+    </BrowserRouter>
   );
 };
 

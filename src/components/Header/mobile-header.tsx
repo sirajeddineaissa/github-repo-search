@@ -35,6 +35,7 @@ const MobileHeader: React.FC<MobileHeaderProps> = (props) => {
         onClick={props.onClose}
       />
       <Button
+        role="mobiledetailsbutton"
         w="full"
         as="a"
         colorScheme="blue"
@@ -46,6 +47,7 @@ const MobileHeader: React.FC<MobileHeaderProps> = (props) => {
         Project Details
       </Button>
       <Button
+        role="mobilelinkedin"
         w="full"
         as="a"
         colorScheme="blue"
@@ -57,6 +59,7 @@ const MobileHeader: React.FC<MobileHeaderProps> = (props) => {
         LinkedIn
       </Button>
       <Button
+        role="mobilegithub"
         w="full"
         as="a"
         colorScheme="blue"
