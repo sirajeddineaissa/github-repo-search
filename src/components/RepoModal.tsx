@@ -35,10 +35,14 @@ const RepoModal: React.FC<RepoModalProps> = (props) => {
           {props.description ? props.description : "No Description."}
         </ModalBody>
         <ModalFooter>
-          <HStack mt={4} mr={6} fontSize={"small"} spacing={12}>
+          <HStack
+            mt={4}
+            fontSize={"small"}
+            spacing={12}
+          >
             <a href={props.URL} target="_blank" rel="noopener noreferrer">
               <Button
-                mr={16}
+                mr={{ base: 11, md: 16 }}
                 fontSize={"small"}
                 colorScheme="blue"
                 onClick={props.onClose}

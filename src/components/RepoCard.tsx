@@ -39,6 +39,7 @@ const RepoCard: React.FC<RepoCardProps> = (props) => {
         textAlign={"center"}
         onClick={onOpen}
         p={10}
+        _hover={{ transform: "scale(1.05)"}}
       >
         <Avatar size={"xl"} src={props.avatar} mb={4} pos={"relative"} />
         <Heading fontSize={"l"}>{props.name}</Heading>
@@ -59,11 +60,17 @@ const RepoCard: React.FC<RepoCardProps> = (props) => {
               {props.stars}
             </Box>
             <Box>
-              <AiOutlineFork role="forkicon" color={props.forks ? "#E460C3" : ""} />
+              <AiOutlineFork
+                role="forkicon"
+                color={props.forks ? "#E460C3" : ""}
+              />
               {props.forks}
             </Box>
             <Box>
-              <FaBullseye role="watchericon" color={props.watchers ? "#E83852" : ""} />
+              <FaBullseye
+                role="watchericon"
+                color={props.watchers ? "#E83852" : ""}
+              />
               {props.watchers}
             </Box>
           </HStack>

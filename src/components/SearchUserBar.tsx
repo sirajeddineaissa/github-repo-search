@@ -1,9 +1,4 @@
-import {
-  Button,
-  FormControl,
-  HStack,
-  Input,
-} from "@chakra-ui/react";
+import { Button, FormControl, HStack, Input } from "@chakra-ui/react";
 
 interface SearchUserBarProps {
   setUsername: React.Dispatch<React.SetStateAction<string>>;
@@ -25,10 +20,11 @@ const SearchUserBar: React.FC<SearchUserBarProps> = (props) => {
 
   return (
     <>
-      <FormControl w={["sm", "md", "3xl"]} pt={1} mx="auto" mb={8}>
+      <FormControl w={["xs", "sm", "md", "3xl"]} pt={1} mx="auto" mb={8}>
         <HStack mt={200}>
           <Input
-            size="lg"
+            size={"lg"}
+            fontSize={17}
             placeholder="Type a GitHub username"
             onChange={handleChange}
             onKeyDown={onEnterPress}

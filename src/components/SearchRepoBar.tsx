@@ -44,10 +44,11 @@ const SearchRepoBar: React.FC = () => {
 
   return (
     <>
-      <FormControl w={["sm", "md"]} pt={1} mx="auto" mb={8}>
+      <FormControl w={["xs", "sm", "md"]} pt={1} mx="auto" mb={8}>
         <HStack mt={200}>
           <Input
             size="lg"
+            fontSize={17}
             placeholder="Type a GitHub repository"
             onChange={inputHandler}
             required

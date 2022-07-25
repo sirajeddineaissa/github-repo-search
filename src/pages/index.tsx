@@ -38,6 +38,7 @@ const Hero: React.FC = () => {
           mb={6}
           fontSize={{ base: "lg", md: "xl" }}
           color="gray.600"
+          textAlign={"center"}
           _dark={{ color: "gray.300" }}
         >
           A web-based interface solution that allows users to search GitHub
@@ -97,11 +98,7 @@ const Hero: React.FC = () => {
         <Image
           w="full"
           rounded="lg"
-          src={
-            isMobile
-              ? require("../assets/mobile-preview.jpg")
-              : require("../assets/desktop-preview.jpg")
-          }
+          src={require("../assets/desktop-preview.jpg")}
           alt="Homepage Image"
         />
       </Box>
