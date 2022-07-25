@@ -9,7 +9,7 @@
 </div>
 
 <div align="center">
-    <img src="./src/assets/readme-logo.jpg" alt="logo" height="250px" width="250px">
+    <img src="./src/assets/readme-logo.jpg" alt="logo">
   <br/>
   <p align="center">
     <a href="https://mvst-project.netlify.app">View Demo</a>
