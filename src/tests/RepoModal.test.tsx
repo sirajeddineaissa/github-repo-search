@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import RepoModal from "../components/RepoModal";
 
-test("Render the Repository Modal", () => {
+test("Renders the Repository Modal", () => {
   render(
     <RepoModal
       isOpen={true}
@@ -21,7 +21,7 @@ test("Render the Repository Modal", () => {
   expect(repoModalElement).toBeInTheDocument;
 });
 
-test("Check if the star, fork and watcher icons change color they exceed 0 in the Repository Modal", () => {
+test("Check if the star, fork and watcher icons change color if they exceed 0 in the Repository Modal", () => {
   render(
     <RepoModal
       isOpen={true}

@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import RepoCard from "../components/RepoCard";
 
-test("Render the Repository Card", () => {
+test("Renders the Repository Card", () => {
   render(
     <RepoCard
       avatar={""}
@@ -19,7 +19,7 @@ test("Render the Repository Card", () => {
   expect(repoCardElement).toBeInTheDocument;
 });
 
-test("Check if the star, fork and watcher icons change color they exceed 0 in the Repository Card", () => {
+test("Checks if the star, fork and watcher icons change color if they exceed 0 in the Repository Card", () => {
   render(
     <RepoCard
       avatar={""}

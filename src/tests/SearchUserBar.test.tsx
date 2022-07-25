@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import SearchUserBar from "../components/SearchUserBar";
 
-test("Render the Search User Bar", () => {
+test("Renders the Search User Bar", () => {
   render(
     <SearchUserBar
       setUsername={function (value: React.SetStateAction<string>): void {
