@@ -89,6 +89,7 @@ const Header: React.FC = () => {
             </HStack>
 
             <IconButton
+              role="themeswitcher"
               size="md"
               fontSize="lg"
               aria-label={`Switch to ${mode} mode`}
@@ -98,7 +99,7 @@ const Header: React.FC = () => {
               onClick={toggleMode}
               icon={<SwitchIcon />}
             />
-            {HeaderButton}
+            <HeaderButton />
             <IconButton
               display={{ base: "flex", md: "none" }}
               aria-label="Open menu"

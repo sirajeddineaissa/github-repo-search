@@ -55,15 +55,15 @@ const RepoCard: React.FC<RepoCardProps> = (props) => {
         <Center>
           <HStack mt={6} fontSize={"md"} spacing={20}>
             <Box>
-              <FaStar color={props.stars ? "gold" : ""} />
+              <FaStar role="staricon" color={props.stars ? "gold" : ""} />
               {props.stars}
             </Box>
             <Box>
-              <AiOutlineFork color={props.forks ? "#E460C3" : ""} />
+              <AiOutlineFork role="forkicon" color={props.forks ? "#E460C3" : ""} />
               {props.forks}
             </Box>
             <Box>
-              <FaBullseye color={props.watchers ? "#E83852" : ""} />
+              <FaBullseye role="watchericon" color={props.watchers ? "#E83852" : ""} />
               {props.watchers}
             </Box>
           </HStack>
